@@ -1,1 +1,130 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flight booking – SkyBook</title><link rel="stylesheet" href="css/style.css"></head><body><nav class="nav"><a class="logo" href="index.html">✈️ SkyBook</a><div class="links"><a href="index.html" class="on">Home</a><a href="read.html" class="">Read</a><a href="write.html" class="">Write</a></div><button class="btn" data-wallet>Connect wallet</button></nav><section class="hero"><div class="ico" style="background:#3b82f622;margin:0 auto 14px;font-size:30px;width:64px;height:64px">✈️</div><h1>SkyBook</h1><p>Airlines list flights; tickets are owned on-chain.</p><a class="btn" href="write.html">Get started</a> <a class="btn ghost" href="read.html">View data</a></section><h2 class="sec">Why SkyBook</h2><div class="grid"><div class="card"><h3>Airline listings</h3><p>Approved airlines publish flights and seats.</p></div><div class="card"><h3>Owned tickets</h3><p>Each booking is recorded against your wallet.</p></div><div class="card"><h3>Refund rules in code</h3><p>Cancel more than 24 hours before departure for a full refund.</p></div></div><h2 class="sec">How it works</h2><div class="grid"><div class="card"><div class="num">1</div><h3>Connect</h3><p>Link your EVM wallet.</p></div><div class="card"><div class="num">2</div><h3>Act</h3><p>Use the Write page to send a transaction.</p></div><div class="card"><div class="num">3</div><h3>Verify</h3><p>Use the Read page to check the result on-chain.</p></div></div><footer>© 2026 SkyBook · Built on BOT Chain<br><a href="https://botchain.ai" target="_blank" rel="noopener">BOT Chain Website</a> · <a href="https://scan.botchain.ai" target="_blank" rel="noopener">BOT Chain Explorer</a></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script><script src="js/config.js"></script><script src="js/wallet.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkyBook – On-chain flight booking</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html"><span class="logo-plane">✈️</span> SkyBook</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="read.html">Read</a>
+    <a href="write.html">Write</a>
+  </div>
+  <button class="btn-connect" data-wallet>Connect Wallet</button>
+</nav>
+
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ticker-dot"></span>LOS → ABJ</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>ACC → NBO</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>DXB → CMN</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>JNB → LOS</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>ABJ → DAK</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>NBO → ADD</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>LOS → ABJ</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>ACC → NBO</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>DXB → CMN</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>JNB → LOS</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>ABJ → DAK</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>NBO → ADD</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-tag">✈️ Powered by BOT Chain · Chain ID 968</div>
+  <h1>Flight tickets.<br><span>Owned on-chain.</span></h1>
+  <p class="hero-sub">Airlines list flights with seats and prices. Passengers book and own their tickets as on-chain records. Cancel more than 24 h before departure for a full refund.</p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="write.html">Book a Flight</a>
+    <a class="btn-ghost" href="read.html">Browse Flights</a>
+  </div>
+</header>
+
+<section class="features">
+  <div style="max-width:960px;margin:0 auto">
+    <h2 class="section-title">Everything airlines and passengers need</h2>
+    <p class="section-sub">All rules enforced by the contract — no backend required.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🛫</div>
+        <h3>Airline listings</h3>
+        <p>Admin-approved airlines publish routes, departure times, seat counts and prices directly on-chain.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎫</div>
+        <h3>Wallet-owned tickets</h3>
+        <p>Each booking is a record tied to your wallet address — no account, no email needed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>Refund guarantee</h3>
+        <p>Cancel more than 24 hours before departure and get a full automatic refund. Rules are in code.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Revenue tracking</h3>
+        <p>Airlines accrue revenue on-chain and claim it any time with a single <code>claim()</code> call.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Flight cancellations</h3>
+        <p>If an airline cancels a flight, all booked passengers are automatically refunded.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✅</div>
+        <h3>Check-in on-chain</h3>
+        <p>Airlines mark passengers as checked in, creating a verifiable, tamper-proof boarding record.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="steps">
+  <div class="steps-inner" style="max-width:860px;margin:0 auto">
+    <h2 class="section-title">How to use SkyBook</h2>
+    <p class="section-sub">Three roles, three flows — all on-chain.</p>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Admin</h3>
+        <p>Approves airline addresses with <code>addAirline()</code> to allow them to list flights.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Airline</h3>
+        <p>Lists flights via <code>addFlight()</code> with route, departure, price, and seat count.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Passenger</h3>
+        <p>Calls <code>book(flightId)</code> sending exactly the flight price in BOT to receive a ticket.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Travel</h3>
+        <p>Airline calls <code>checkIn(ticketId)</code> at boarding. Revenue is claimable any time.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="logo"><span class="logo-plane">✈️</span> SkyBook</span>
+    <span>© 2026 · Built on BOT Chain · Not audited – use on testnet first</span>
+    <div class="footer-links">
+      <a href="https://botchain.ai" target="_blank" rel="noopener">BOT Chain</a>
+      <a href="https://scan.bohr.life" target="_blank" rel="noopener">Explorer</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/wallet.js"></script>
+</body>
+</html>

@@ -1,8 +1,22 @@
 # SkyBook
 
-1. Deploy `contract/SkyBook.sol` (Remix or Hardhat).
-2. Open `js/config.js` and set `address` to the deployed contract address.
-3. Serve this folder with any static server (e.g. VS Code Live Server) and connect your wallet. The app switches your wallet to BOT Chain (chain ID 968, RPC https://rpc.botchain.ai) automatically; explorer: https://scan.botchain.ai.
+On-chain flight booking — airlines, seats, refunds. Built on BOT Chain.
 
-Not audited – test on a testnet first.
-# stayBook
+## Setup
+
+1. Deploy `contract/SkyBook.sol` on BOT Chain Testnet (chain ID 968).
+2. Set `address` in `js/config.js` to your deployed contract address.
+3. Serve this folder with any static file server.
+4. Admin calls `addAirline(address)` to approve airlines before they can list flights.
+
+## Network
+
+- Chain ID: 968 | RPC: https://rpc.botchain.ai | Explorer: https://scan.bohr.life
+
+## New in v2 (this release)
+
+- Full contract: `removeAirline`, `transferAdmin`, `cancelFlight`, `checkIn`, `availableSeats`, `getPassengerTickets`, `flightCount`, `ticketCount`
+- Complete frontend: aviation-blue UI with ticker, all read/write functions exposed
+- Whitepaper included: `WHITEPAPER.md`
+
+Not audited – use on testnet first.
