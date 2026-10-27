@@ -167,7 +167,7 @@ Claimed(airline, amount)
 
 ## 8. Deployment
 
-**Network:** BOT Chain Testnet — Chain ID 968, RPC `https://rpc.botchain.ai`
+**Network:** BOT Chain mainnet — Chain ID 677, RPC `https://rpc.botchain.ai`
 
 **Steps:**
 1. Compile with Solidity 0.8.20+.
@@ -180,7 +180,7 @@ Claimed(airline, amount)
 
 ## 9. Limitations & Disclaimer
 
-- **Not audited.** Test on testnet before mainnet.
+- **Not audited.** Test on mainnet before mainnet.
 - **Flight cancellation gas cost** scales with ticket count — avoid very large seat counts on high-traffic networks.
 - **No partial refunds on late cancellation.** By design, late cancellations are rejected, not partially refunded.
 - **Price is fixed at flight creation.** Dynamic pricing requires a new contract or an upgrade pattern.

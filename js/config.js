@@ -1,12 +1,12 @@
 // TODO: replace with your deployed contract address
 const CHAIN = {
-  id: 968, hex: "0x3c8", name: "BOT Chain Testnet",
-  symbol: "BOT", rpc: "https://rpc.bohr.life",
-  explorer: "https://scan.bohr.life", website: "https://botchain.ai"
+  id: 677, hex: "0x2a5", name: "BOT Chain ",
+  symbol: "BOT", rpc: "https://rpc.botchain.a",
+  explorer: "https://scan.botchain.a", website: "https://botchain.ai"
 };
 
 const CONFIG = {
-  address: "0x28911168b6D40c874b501989F2526D598023bC39",
+  address: "0x5120c465Cf0C0101b665B965ebAb256AC2cBCbBe",
   name: "SkyBook",
   fns: [
     "function addAirline(address airline)",
